@@ -1,0 +1,106 @@
+<style>
+  .mode-landscape .sl-ns-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; gap: 0; }
+  .mode-landscape .sl-ns-left { width: 48%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+  .mode-landscape .sl-ns-right { width: 52%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; gap: 1.25rem; }
+  .mode-portrait .sl-ns-layout { display: flex; flex-direction: column; min-height: 100%; }
+  .mode-portrait .sl-ns-left { padding: 2rem 1.5rem 1rem; }
+  .mode-portrait .sl-ns-right { padding: 1rem 1.5rem 2rem; flex: 1; display: flex; flex-direction: column; gap: 1rem; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-ns-layout h-full">
+
+    <!-- Left: Definition -->
+    <div class="sl-ns-left border-r border-slate-100">
+      <div class="mb-6">
+        <span class="text-xs font-bold tracking-widest uppercase" style="color:#3B82F6;">North Star</span>
+        <h1 class="text-3xl font-bold text-slate-900 leading-tight mt-2 mb-3">The Number That Matters Most</h1>
+        <p class="text-slate-500 text-sm leading-relaxed">One metric drives everything else: <strong class="text-slate-700">Weekly Verified Operations</strong> — the domain events this app actually completes for real users, every week.</p>
+      </div>
+
+      <!-- Verified Operations definition -->
+      <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-5">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Verified Operations</h2>
+        <div class="space-y-2">
+          <div class="flex items-start gap-2">
+            <span class="mt-1 w-2 h-2 rounded-full flex-shrink-0" style="background:#3B82F6;"></span>
+            <p class="text-slate-700 text-sm">Product listing published &amp; live</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="mt-1 w-2 h-2 rounded-full flex-shrink-0" style="background:#3B82F6;"></span>
+            <p class="text-slate-700 text-sm">Customer order confirmed &amp; processed</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="mt-1 w-2 h-2 rounded-full flex-shrink-0" style="background:#3B82F6;"></span>
+            <p class="text-slate-700 text-sm">Trust badge / authenticity check completed</p>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400 mt-3 italic">Logins, edits, and page views are not operations.</p>
+      </div>
+
+      <div class="mt-auto pt-4">
+        <data-attribution />
+      </div>
+    </div>
+
+    <!-- Right: Formula + Projection (definition-only, assumption chips) -->
+    <div class="sl-ns-right">
+      <div class="rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-slate-400">WVO Formula</span>
+          <span class="text-xs px-2 py-0.5 rounded-full font-semibold text-amber-700 bg-amber-100">Fill in your numbers</span>
+        </div>
+        <div class="space-y-2 text-sm text-slate-700 font-mono">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="px-2 py-1 rounded bg-amber-100 text-amber-800 text-xs font-semibold">Assumption — adjust this</span>
+            <span class="text-slate-500">Active sellers / users</span>
+            <span class="font-bold text-slate-900">__</span>
+          </div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-slate-500">×</span>
+            <span class="px-2 py-1 rounded bg-amber-100 text-amber-800 text-xs font-semibold">Assumption — adjust this</span>
+            <span class="text-slate-500">Operations per user / week</span>
+            <span class="font-bold text-slate-900">__</span>
+          </div>
+          <div class="flex items-center gap-2 mt-1 pt-2 border-t border-slate-200">
+            <span class="text-slate-500">=</span>
+            <span class="text-lg font-black text-slate-900">__ WVO / week</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Value per operation -->
+      <div class="rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Value per Operation</span>
+        </div>
+        <div class="text-sm text-slate-700 font-mono space-y-1">
+          <div class="flex gap-2 flex-wrap items-center">
+            <span class="px-2 py-1 rounded bg-amber-100 text-amber-800 text-xs font-semibold">Assumption — adjust this</span>
+            <span class="text-slate-500">Time saved per op (min)</span>
+            <span class="font-bold text-slate-900">__</span>
+          </div>
+          <div class="flex gap-2 flex-wrap items-center">
+            <span class="text-slate-500">× hourly cost</span>
+            <span class="px-2 py-1 rounded bg-amber-100 text-amber-800 text-xs font-semibold">Assumption — adjust this</span>
+            <span class="font-bold text-slate-900">$__/hr</span>
+          </div>
+          <div class="flex gap-2 items-center mt-1 pt-2 border-t border-slate-200">
+            <span class="text-slate-500">=</span>
+            <span class="font-black text-slate-900">$__ saved per operation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total projected value -->
+      <div class="rounded-2xl p-5" style="background-color:#1E3A5F;">
+        <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:#93C5FD;">Projected Impact — based on your inputs</p>
+        <div class="flex items-end gap-3 flex-wrap">
+          <span class="text-4xl font-black text-white">$__ / week</span>
+          <span class="text-white/60 text-sm pb-1">→ $__ / year (×52)</span>
+        </div>
+        <p class="text-white/50 text-xs mt-2 italic">Fill in the assumption chips above to see your real numbers.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
